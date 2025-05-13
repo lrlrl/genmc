@@ -27,7 +27,7 @@
 #include <cstdint>
 #include <string>
 
-enum class ModelType : std::uint8_t { SC = 0, TSO = 1, RA = 2, RC11 = 3, IMM = 4 };
+enum class ModelType : std::uint8_t { SC = 0, TSO = 1, RA = 2, RC11 = 3, IMM = 4, RISCV=5};
 
 inline auto operator<<(llvm::raw_ostream &s, const ModelType &model) -> llvm::raw_ostream &
 {
@@ -42,6 +42,8 @@ inline auto operator<<(llvm::raw_ostream &s, const ModelType &model) -> llvm::ra
 		return s << "RC11";
 	case ModelType::IMM:
 		return s << "IMM";
+	case ModelType::RISCV:
+		return s << "RISC-V";
 	default:
 		PRINT_BUGREPORT_INFO_ONCE("missing-model-name", "Unknown memory model name");
 		return s;
@@ -50,13 +52,14 @@ inline auto operator<<(llvm::raw_ostream &s, const ModelType &model) -> llvm::ra
 
 inline auto isStrongerThan(ModelType model, ModelType other) -> bool
 {
-	static const bool lookup[5][5] = {
-		//          SC     TSO    RA     RC11   IMM
-		/* SC   */ {false, true, true, true, true},
-		/* TSO  */ {false, false, true, true, true},
-		/* RA   */ {false, false, false, true, true},
-		/* RC11 */ {false, false, false, false, true},
-		/* IMM  */ {false, false, false, false, false},
+	static const bool lookup[6][6] = {
+		//          SC     TSO    RA     RC11   IMM    RVWMO
+		/* SC   */ {false, true,  true,  true,  true,  true },
+		/* TSO  */ {false, false, true,  true,  true,  true },
+		/* RA   */ {false, false, false, true,  true,  true },
+		/* RC11 */ {false, false, false, false, true,  true },
+		/* IMM  */ {false, false, false, false, false, true },
+		/* RVWMO*/ {false, false, false, false, false, false}
 	};
 	return lookup[static_cast<size_t>(model)][static_cast<size_t>(other)];
 }

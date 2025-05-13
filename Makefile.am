@@ -85,6 +85,7 @@ libgenmc_a_SOURCES = \
   src/Verification/Consistency/RoundBoundDecider.cpp \
   src/Verification/Consistency/SCDriver.cpp \
   src/Verification/Consistency/TSODriver.cpp \
+  src/Verification/Consistency/RISCVDriver.cpp \
   src/main.cpp
 
 TESTS=scripts/fast-driver.sh scripts/randomize-driver.sh
