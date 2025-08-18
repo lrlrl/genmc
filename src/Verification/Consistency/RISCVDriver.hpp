@@ -75,54 +75,52 @@ private:
 	std::vector<Event> getMOInvOptRfAfter(const WriteLabel *sLab);
 	mutable const EventLabel *cexLab{};
 
-	mutable std::vector<NodeStatus> visitedCalc86_0;
-	mutable std::vector<NodeStatus> visitedCalc86_1;
-	mutable std::vector<NodeStatus> visitedCalc86_2;
-	mutable std::vector<NodeStatus> visitedCalc86_3;
-	mutable std::vector<NodeStatus> visitedCalc86_4;
-	mutable std::vector<NodeStatus> visitedCalc86_5;
-	mutable std::vector<NodeStatus> visitedCalc86_6;
-	mutable std::vector<NodeStatus> visitedCalc86_7;
-	mutable std::vector<NodeStatus> visitedCalc86_8;
-	mutable std::vector<NodeStatus> visitedCalc86_9;
-	mutable std::vector<NodeStatus> visitedCalc86_10;
-	mutable std::vector<NodeStatus> visitedCalc86_11;
-	mutable std::vector<NodeStatus> visitedCalc86_12;
-	mutable std::vector<NodeStatus> visitedCalc86_13;
+	mutable std::vector<NodeStatus> visitedCalc89_0;
+	mutable std::vector<NodeStatus> visitedCalc89_1;
+	mutable std::vector<NodeStatus> visitedCalc89_2;
+	mutable std::vector<NodeStatus> visitedCalc89_3;
+	mutable std::vector<NodeStatus> visitedCalc89_4;
+	mutable std::vector<NodeStatus> visitedCalc89_5;
+	mutable std::vector<NodeStatus> visitedCalc89_6;
+	mutable std::vector<NodeStatus> visitedCalc89_7;
+	mutable std::vector<NodeStatus> visitedCalc89_8;
+	mutable std::vector<NodeStatus> visitedCalc89_9;
+	mutable std::vector<NodeStatus> visitedCalc89_10;
+	mutable std::vector<NodeStatus> visitedCalc89_11;
+	mutable std::vector<NodeStatus> visitedCalc89_12;
 
-	bool visitCalc86_0(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_1(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_2(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_3(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_4(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_5(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_6(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_7(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_8(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_9(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_10(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_11(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_12(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc86_13(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_0(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_1(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_2(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_3(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_4(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_5(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_6(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_7(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_8(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_9(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_10(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_11(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc89_12(const EventLabel *lab, View &calcRes) const;
 
-	View visitCalc86(const EventLabel *lab) const;
+	View visitCalc89(const EventLabel *lab) const;
 	const View&getHbStableView(const EventLabel *lab) const { return lab->view(0); }
 
-	auto checkCalc86(const EventLabel *lab) const;
-	mutable std::vector<NodeStatus> visitedCalc91_0;
-	mutable std::vector<NodeStatus> visitedCalc91_1;
-	mutable std::vector<NodeStatus> visitedCalc91_2;
-	mutable std::vector<NodeStatus> visitedCalc91_3;
+	auto checkCalc89(const EventLabel *lab) const;
+	mutable std::vector<NodeStatus> visitedCalc94_0;
+	mutable std::vector<NodeStatus> visitedCalc94_1;
+	mutable std::vector<NodeStatus> visitedCalc94_2;
+	mutable std::vector<NodeStatus> visitedCalc94_3;
 
-	bool visitCalc91_0(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc91_1(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc91_2(const EventLabel *lab, View &calcRes) const;
-	bool visitCalc91_3(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc94_0(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc94_1(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc94_2(const EventLabel *lab, View &calcRes) const;
+	bool visitCalc94_3(const EventLabel *lab, View &calcRes) const;
 
-	View visitCalc91(const EventLabel *lab) const;
+	View visitCalc94(const EventLabel *lab) const;
 	const View&getPorfStableView(const EventLabel *lab) const { return lab->view(1); }
 
-	auto checkCalc91(const EventLabel *lab) const;
+	auto checkCalc94(const EventLabel *lab) const;
 	mutable std::vector<NodeVisitStatus> visitedCoherence_0;
 	mutable std::vector<NodeVisitStatus> visitedCoherence_1;
 	mutable std::vector<NodeVisitStatus> visitedCoherence_2;
@@ -135,7 +133,6 @@ private:
 	mutable std::vector<NodeVisitStatus> visitedCoherence_9;
 	mutable std::vector<NodeVisitStatus> visitedCoherence_10;
 	mutable std::vector<NodeVisitStatus> visitedCoherence_11;
-	mutable std::vector<NodeVisitStatus> visitedCoherence_12;
 	mutable uint32_t visitedCoherenceAccepting;
 
 	bool visitCoherence_0(const EventLabel *lab) const;
@@ -150,7 +147,6 @@ private:
 	bool visitCoherence_9(const EventLabel *lab) const;
 	bool visitCoherence_10(const EventLabel *lab) const;
 	bool visitCoherence_11(const EventLabel *lab) const;
-	bool visitCoherence_12(const EventLabel *lab) const;
 
 	bool visitCoherenceFull() const;
 
@@ -165,7 +161,6 @@ private:
 	mutable std::vector<NodeVisitStatus> visitedConsAcyclic1_8;
 	mutable std::vector<NodeVisitStatus> visitedConsAcyclic1_9;
 	mutable std::vector<NodeVisitStatus> visitedConsAcyclic1_10;
-	mutable std::vector<NodeVisitStatus> visitedConsAcyclic1_11;
 	mutable uint32_t visitedConsAcyclic1Accepting;
 
 	bool visitConsAcyclic1_0(const EventLabel *lab) const;
@@ -179,7 +174,6 @@ private:
 	bool visitConsAcyclic1_8(const EventLabel *lab) const;
 	bool visitConsAcyclic1_9(const EventLabel *lab) const;
 	bool visitConsAcyclic1_10(const EventLabel *lab) const;
-	bool visitConsAcyclic1_11(const EventLabel *lab) const;
 
 	bool visitConsAcyclic1(const EventLabel *lab) const;
 
@@ -297,7 +291,6 @@ private:
 	void visitPPoRf9(const EventLabel *lab, DepView &pporf) const;
 	void visitPPoRf10(const EventLabel *lab, DepView &pporf) const;
 	void visitPPoRf11(const EventLabel *lab, DepView &pporf) const;
-	void visitPPoRf12(const EventLabel *lab, DepView &pporf) const;
 
 	DepView calcPPoRfBefore(const EventLabel *lab) const;
 
@@ -313,7 +306,6 @@ private:
 	mutable std::vector<NodeStatus> visitedPPoRf9;
 	mutable std::vector<NodeStatus> visitedPPoRf10;
 	mutable std::vector<NodeStatus> visitedPPoRf11;
-	mutable std::vector<NodeStatus> visitedPPoRf12;
 
 
 };
